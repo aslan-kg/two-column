@@ -1,0 +1,68 @@
+*{/*univeral style properties*/
+    margin: 0;
+    margin-left: 0.5em;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{/*makes the page background*/
+    background-color: antiquewhite;
+}
+/*containert creates the grid area*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+/*left column properties*/
+.column-left{
+    margin-right: 1em;
+    background-color: rgb(255, 211, 145);
+    border-right: 5px solid rgb(230, 173, 173);
+}
+/*right column properties*/
+.column-right{
+    padding-left: 1em;
+}
+
+h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+p{
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+/*list style properties*/
+ul{
+    list-style: none;
+    margin-left: 1em;
+}
+
+/*if screen size is less than 500px implement these setting*/
+@media (max-width: 600px)
+{
+    body{
+        background-color: aqua;
+        font-size: 0.9em;
+    }
+/*container and colmun-left are used to ajust the positioning of the columns for small screen size*/
+    .container{
+        max-width: 90%;
+        grid-gap: 0.1em;
+    }
+
+    .column-left{
+        margin-right: 0em;
+        padding-left: 1em;
+        background-color: violet;
+    }
+}
+
+
